@@ -1,0 +1,36 @@
+<!DOCTYPE html> 
+{% extends 'base.html' %}
+{% block content %}
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Flask Web Form</title>
+    </head> 
+    <body>
+        {% if name %}
+            <h1>Thank you {{ name }}, Your Update has Been Recorded</h1> <br>
+            <a href="{{ url_for('log') }}" class="btn btn-primary stretched-link">Post Log</a>
+        {% else %}
+            <h1>What is your name?</h1>
+            <div class="container-fluid">
+            <table align="center" cellpadding="10">
+                <tbody>
+                <form method="POST"> 
+                    {{ form.hidden_tag() }}
+                    <tr>
+                        <td><label class="form-label">Name:</label></td><td>{{ form.name(class="input-group-text", id="inputGroup-sizing-sm") }}</td> 
+                    </tr>
+                    <tr>
+                        <td>{{ form.submit(class="btn btn-primary") }}</td>
+                    </tr>           
+                </form>
+                </tbody>
+            </table>
+            </div>
+            
+
+        {% endif %}   
+    </body>
+</html>
+{% endblock %}

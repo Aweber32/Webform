@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% block content %}
+<html>
+    <h1>Security Fix Log</h1>
+    {% for entry in entrys %} 
+        <h4>
+            {{ entry.name }} <a href="/delete/{{ entry.id }}" class="btn btn-outline-danger btn-sm" align="left">Delete</a> <br> <hr>
+        </h4>
+    {% endfor %}
+
+</html>
+{% endblock %}
