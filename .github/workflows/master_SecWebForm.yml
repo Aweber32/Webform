@@ -59,4 +59,4 @@ jobs:
         with:
           app-name: 'SecWebForm'
           slot-name: 'production'
-          publish-profile: ${{ secrets.AzureAppService_PublishProfile_84f19c1bb2db4f05a5530e876cbb1a7a }}
+          publish-profile: ${{ secrets.AzureAppService_PublishProfile_475ab5e3b7e24b7993dc092cc497e089 }}
