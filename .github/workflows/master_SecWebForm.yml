@@ -20,7 +20,7 @@ jobs:
     - name: Set up Python version
       uses: actions/setup-python@v1
       with:
-        python-version: '3.7'
+        python-version: '3.8'
 
     - name: Create and start virtual environment
       run: |
@@ -59,4 +59,4 @@ jobs:
         with:
           app-name: 'SecWebForm'
           slot-name: 'production'
-          publish-profile: ${{ secrets.AzureAppService_PublishProfile_a3e3e8ae384449bf9df4e10d201c1b0e }}
+          publish-profile: ${{ secrets.AzureAppService_PublishProfile_3f61e544fcee419bb104fbee8cd83ba9 }}
